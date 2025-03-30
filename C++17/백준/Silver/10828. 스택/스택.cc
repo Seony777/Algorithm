@@ -14,55 +14,42 @@ int main(void)
 
 	for (int i = 0; i < n; i++)
 	{
-		string command;
-		cin >> command;
+		string order;
 
-		if (command == "push")
+		cin >> order;
+
+		if (order == "push")
 		{
 			cin >> num;
 			s.push(num);
 		}
-
-		else if (command == "pop")
+		else if (order == "pop")
 		{
 			if (s.size() == 0)
-			{
-				cout << -1 << '\n';
-			}
+				cout << -1<<'\n';
 			else
 			{
-				cout << s.top() << "\n";
+				cout << s.top()<<'\n';
 				s.pop();
 			}
 		}
-
-		else if (command == "size")
+		else if (order == "size")
 		{
-			cout << s.size() << "\n";
+			cout << s.size()<<'\n';
 		}
-
-		else if (command == "empty")
+		else if (order == "empty")
 		{
 			if (s.size() == 0)
-			{
-				cout << 1 << "\n";
-			}
+				cout << 1<<'\n';
 			else
-			{
-				cout << 0 << "\n";
-			}
+				cout << 0<<"\n";
 		}
-
-		else if (command == "top")
+		else if (order == "top")
 		{
 			if (s.size() == 0)
-			{
-				cout << -1 << "\n";
-			}
+				cout << -1<<'\n';
 			else
-			{
-				cout << s.top() << "\n";
-			}
+				cout << s.top()<<'\n';
 		}
 	}
 	return 0;
